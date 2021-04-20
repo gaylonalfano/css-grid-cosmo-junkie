@@ -1,0 +1,112 @@
+/* variables */
+:root {
+  --primary: hsl(43, 100%, 61%, 1);
+  --secondary: hsl(239, 80%, 20%, 1);
+}
+
+/* reset browser default styles */
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Rubik-Regular";
+}
+li {
+  list-style-type: none;
+}
+
+/* base styles */
+body {
+  background: var(--secondary);
+  overflow-x: hidden;
+  /* font-size: clamp(1rem, 2vw, 1.25rem); */
+  font-size: clamp(1rem, 0.9167rem + 0.3704vw, 1.25rem);
+}
+.button {
+  background: none;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 1px 2px 3px hsl(0, 0%, 13%, 1);
+  display: inline-block;
+}
+.button:hover {
+  color: #222;
+  background: var(--primary);
+}
+input,
+textarea {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid #9893d8;
+  color: #f2f2f2;
+}
+
+/* fonts */
+@font-face {
+  font-family: "Rubik-Regular";
+  src: url(assets/fonts/Rubik/static/Rubik-Regular.ttf);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #dddbff;
+  font-weight: normal;
+}
+
+p,
+a,
+li {
+  color: #9893d8;
+}
+
+h1,
+h3 {
+  font-size: 1.2em;
+  /* font-size: clamp(1em, 2.5vw, 1.2em); */
+}
+
+h2 {
+  font-size: 1.6em;
+  /* font-size: clamp(1em, 2.5vw, 1.6em); */
+}
+
+h4 {
+  font-size: 1.1em;
+  /* font-size: clamp(1em, 2.5vw, 1.1em); */
+}
+
+.leading {
+  font-size: 1.1em;
+}
+/* mobile styles */
+
+/* /1* small tablet styles *1/ */
+/* @media screen and (min-width: 620px) { */
+/* } */
+
+/* /1* large tablet styles *1/ */
+/* @media screen and (min-width: 960px) { */
+/*   body { */
+/*     font-size: 18px; */
+/*   } */
+/* } */
+
+/* /1* desktop tablet styles *1/ */
+/* @media screen and (min-width: 1200px) { */
+/*   body { */
+/*     font-size: 20px; */
+/*   } */
+/* } */
+
+/* NOTE Could also consider clamp(min, preferred, max) */
+/* e.g, article { width: clamp(200px, 50%, 600px) } */
