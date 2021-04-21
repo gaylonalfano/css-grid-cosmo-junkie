@@ -13,7 +13,6 @@ li {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: "Rubik-Regular";
 }
 li {
   list-style-type: none;
@@ -25,6 +24,7 @@ body {
   overflow-x: hidden;
   /* font-size: clamp(1rem, 2vw, 1.25rem); */
   font-size: clamp(1rem, 0.9167rem + 0.3704vw, 1.25rem);
+  font-family: "Rubik-Regular";
 }
 .button {
   background: none;
@@ -47,9 +47,11 @@ textarea {
   border-radius: 20px;
   border: 2px solid #9893d8;
   color: #f2f2f2;
+  /* font-family: "Rubik-Regular"; */
 }
 
 /* fonts */
+/* Register your own local fonts using font-face */
 @font-face {
   font-family: "Rubik-Regular";
   src: url(assets/fonts/Rubik/static/Rubik-Regular.ttf);
@@ -202,6 +204,68 @@ h4 {
 /*   color: #9994f7; */
 /* } */
 
+#contact {
+  padding: 30px 20px;
+  background: #080936;
+}
+
+#contact h3,
+#contact p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#contact form {
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  margin: 10px 0;
+  /* Make the width fill form inner box (border-box vs. content-box) */
+  box-sizing: border-box;
+}
+
+#contact .button {
+  margin-top: 10px;
+}
+
+footer {
+  padding: 30px 20px;
+  /* Going to add an image so using bg-color instead of just bg */
+  background-color: #14153d;
+  background-image: url(assets/footer_image.png);
+  background-size: 40%;
+  /* Only display once using no-repeat */
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+footer .copyright {
+  grid-column: 1 / 3;
+  font-size: 0.8em;
+}
+
+/* Using display: flex to place side-by-side */
+footer .social {
+  grid-column: 7 / 9;
+  /* Make the icons side-by-side using display:flex */
+  display: flex;
+  /* Justify all content to end/edge of columns */
+  justify-content: flex-end;
+}
+
+footer li {
+  margin: 0 6px;
+}
+
+footer img {
+  width: 30px;
+}
 /* /1* small tablet styles *1/ */
 /* @media screen and (min-width: 620px) { */
 /* } */
