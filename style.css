@@ -89,9 +89,12 @@ h4 {
   font-size: 1.1em;
 }
 /* mobile styles */
+/* NOTE This is more like a GLOBAL grid config since we apply grid class multiple times */
+/* Could certainly configure separate custom grids if needed */
 .grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
 }
 
 .site-nav {
@@ -161,6 +164,43 @@ h4 {
 .projects h4 {
   color: #9994f7;
 }
+
+#skills {
+  padding: 30px 20px;
+  background: #07083e;
+}
+
+#skills h3 {
+  /* margin-bottom: 0; */
+  text-align: center;
+}
+
+#skills ul {
+  margin: 40px 0;
+}
+
+#skills li {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  /* display: flex; */
+  /* Each li will take up 4 columns (out of 8) to have 2 per row */
+  grid-column: span 4;
+  text-align: center;
+}
+
+#skills img {
+  height: 80px;
+  margin: 10px auto;
+}
+
+#skills p {
+  text-align: center;
+  margin: 0 20px;
+}
+
+/* #skills li h4 { */
+/*   color: #9994f7; */
+/* } */
 
 /* /1* small tablet styles *1/ */
 /* @media screen and (min-width: 620px) { */
