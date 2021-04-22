@@ -74,17 +74,14 @@ li {
 h1,
 h3 {
   font-size: 1.2em;
-  /* font-size: clamp(1em, 2.5vw, 1.2em); */
 }
 
 h2 {
   font-size: 1.6em;
-  /* font-size: clamp(1em, 2.5vw, 1.6em); */
 }
 
 h4 {
   font-size: 1.1em;
-  /* font-size: clamp(1em, 2.5vw, 1.1em); */
 }
 
 .leading {
@@ -110,7 +107,7 @@ h4 {
 .site-nav h1 {
   /* grid-column: 1 / 4; */
   /* grid-row: 1 */
-  grid-area: 1 / 1 / 2 / 4;
+  grid-area: 1 / 1 / 2 / 5;
   padding-bottom: 10px;
   border-bottom: 3px solid var(--primary);
 }
@@ -266,55 +263,74 @@ footer li {
 footer img {
   width: 30px;
 }
+
+/* Media Queries */
 /* /1* small tablet styles *1/ */
-/* @media screen and (min-width: 620px) { */
-/* } */
+@media screen and (min-width: 620px) {
+  /* Reduce number of columns spanned */
+  .welcome-text {
+    grid-area: 1 / 1 / 2 / 5;
+  }
 
-/* /1* large tablet styles *1/ */
-/* @media screen and (min-width: 960px) { */
-/*   body { */
-/*     font-size: 18px; */
-/*   } */
-/* } */
+  .welcome-img {
+    grid-column: 5 / 9;
+  }
 
-/* /1* desktop tablet styles *1/ */
-/* @media screen and (min-width: 1200px) { */
-/*   body { */
-/*     font-size: 20px; */
-/*   } */
-/* } */
+  .welcome-img img {
+    width: 100%;
+  }
+
+  .projects {
+    margin-top: 40px;
+  }
+
+  .projects a {
+    grid-column: span 4;
+    display: block;
+    margin: 20px 0;
+  }
+
+  .projects a:last-child {
+    grid-column: 3 / 7;
+    /* align-self: center; */
+    /* justify-self: center; */
+  }
+
+  /* Justify all the items in each anchor to be in middle */
+  /* Tried grid items-only props (align-self, justify-self) but no good */
+  .projects a * {
+    max-width: 60%;
+    /* Use remaining 40% of width to push to center */
+    margin: 10px 20%;
+  }
+
+  .projects a h4 {
+    text-align: center;
+  }
+
+  #skills {
+    /* Bring in/squeeze everything inward a little */
+    padding: 30px 80px;
+  }
+
+  footer {
+    background-size: 20%;
+  }
+}
+
+/* large tablet styles */
+@media screen and (min-width: 960px) {
+  /* body { */
+  /*   font-size: 18px; */
+  /* } */
+}
+
+/* desktop tablet styles */
+@media screen and (min-width: 1200px) {
+  /* body { */
+  /*   font-size: 20px; */
+  /* } */
+}
 
 /* NOTE Could also consider clamp(min, preferred, max) */
 /* e.g, article { width: clamp(200px, 50%, 600px) } */
-
-/* /1* Grid Testing *1/ */
-/* .projects { */
-/*   display: grid; */
-/*   grid-template-columns: repeat(12, 1fr); */
-/*   gap: 10px; */
-/* } */
-
-/* .projects img { */
-/*   max-width: 100%; */
-/* } */
-
-/* .projects a { */
-/*   text-align: center; */
-/*   background: grey; */
-/*   padding: 20px; */
-/* } */
-
-/* .projects a:nth-child(1) { */
-/*   grid-column: 2/6; */
-/*   grid-row: 1; */
-/* } */
-
-/* .projects a:nth-child(2) { */
-/*   /1* grid-column: 8/12; *1/ */
-/*   /1* grid-row: 1; *1/ */
-/*   grid-area: 1 / 8 / 2 / 12; */
-/* } */
-/* .projects a:nth-child(3) { */
-/*   grid-column: 5/9; */
-/*   grid-row: 2; */
-/* } */
